@@ -1,0 +1,9 @@
+.idea
+.env
+
+# Local development and debugging
+.vscode
+**/.vscode/*
+**/tsconfig.debug.json
+!**/.vscode/launch.json
+**/build.bat

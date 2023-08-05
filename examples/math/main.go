@@ -27,11 +27,11 @@ func main() {
 			log.Fatalf("translator.Translate Error: %v\n", err)
 		}
 
-		_, err = translator.Validator().CreateModuleTextFromJson(response)
+		programStr, err := translator.Validator().CreateModuleTextFromJson(response)
 		if err != nil {
 			log.Fatalf("CreateModuleTextFromJson Error: %v\n", err)
 		}
-		//log.Println(programStr)
+		log.Println(programStr)
 
 		log.Println(fmt.Sprintf("Running program:"))
 		result, err := typechat.EvaluateJsonProgram(response, handleCall)

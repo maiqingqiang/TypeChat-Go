@@ -1,15 +1,20 @@
+// The following is a schema definition for determining the sentiment of a some user input.
+
 package main
 
 import "fmt"
 
+// Sentiment Define the enum type, this value is int
 type Sentiment int
 
+// Define the enum constants for Sentiment
 const (
 	Negative Sentiment = iota
 	Neutral
 	Positive
 )
 
+// Use switch statement to handle the enum type for Sentiment
 func (s Sentiment) String() string {
 	switch s {
 	case Negative:
@@ -24,7 +29,7 @@ func (s Sentiment) String() string {
 }
 
 type SentimentResponse struct {
-	Sentiment int `json:"sentiment"`
+	Sentiment Sentiment `json:"sentiment"` // The sentiment of the Sentiment enum type
 }
 
 func (s SentimentResponse) String() string {

@@ -1,3 +1,16 @@
+<a name="readme-top"></a>
+
+<!-- PROJECT SHIELDS -->
+
+[![go report card][go-report-card]][go-report-card-url]
+[![Go.Dev reference][go.dev-reference]][go.dev-reference-url]
+[![Go package][go-pacakge]][go-pacakge-url]
+[![MIT License][license-shield]][license-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # TypeChat-Go
 
 This is the Go language implementation of [TypeChat](https://github.com/microsoft/TypeChat).
@@ -101,3 +114,22 @@ go run . /input.txt
 ```
 
 ![run.png](examples%2Fmath%2Frun.png)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/maiqingqiang/TypeChat-Go.svg
+[contributors-url]: https://github.com/maiqingqiang/TypeChat-Go/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/maiqingqiang/TypeChat-Go.svg
+[forks-url]: https://github.com/maiqingqiang/TypeChat-Go/network/members
+[stars-shield]: https://img.shields.io/github/stars/maiqingqiang/TypeChat-Go.svg
+[stars-url]: https://github.com/maiqingqiang/TypeChat-Go/stargazers
+[issues-shield]: https://img.shields.io/github/issues/maiqingqiang/TypeChat-Go.svg
+[issues-url]: https://github.com/maiqingqiang/TypeChat-Go/issues
+[license-shield]: https://img.shields.io/github/license/maiqingqiang/TypeChat-Go.svg
+[license-url]: https://github.com/maiqingqiang/TypeChat-Go/blob/main/LICENSE
+[go-report-card]: https://goreportcard.com/badge/github.com/maiqingqiang/TypeChat-Go
+[go-report-card-url]: https://goreportcard.com/report/github.com/maiqingqiang/TypeChat-Go
+[go.dev-reference]: https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white
+[go.dev-reference-url]: https://pkg.go.dev/github.com/maiqingqiang/TypeChat-Go?tab=doc
+[go-pacakge]: https://github.com/maiqingqiang/TypeChat-Go/actions/workflows/test.yml/badge.svg?branch=main
+[go-pacakge-url]: https://github.com/maiqingqiang/TypeChat-Go/actions/workflows/test.yml

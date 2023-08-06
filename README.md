@@ -49,7 +49,7 @@ TypeChat-Go is a library that makes it easy to build natural language interfaces
 Install TypeChat-Go:
 
 ```bash 
-go get github.com/maiqingqiang/typechat
+go get github.com/maiqingqiang/typechat-go
 ```
 
 Configure environment variables

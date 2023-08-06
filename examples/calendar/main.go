@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/maiqingqiang/typechat"
+	"github.com/maiqingqiang/typechat-go"
 	"log"
 	"os"
 )

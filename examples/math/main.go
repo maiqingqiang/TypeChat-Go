@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/maiqingqiang/typechat"
+	"github.com/maiqingqiang/typechat-go"
 	"github.com/spf13/cast"
 	"log"
 	"os"

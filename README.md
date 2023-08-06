@@ -127,9 +127,9 @@ go run . /input.txt
 [issues-url]: https://github.com/maiqingqiang/TypeChat-Go/issues
 [license-shield]: https://img.shields.io/github/license/maiqingqiang/TypeChat-Go.svg
 [license-url]: https://github.com/maiqingqiang/TypeChat-Go/blob/main/LICENSE
-[go-report-card]: https://goreportcard.com/badge/github.com/maiqingqiang/TypeChat-Go
-[go-report-card-url]: https://goreportcard.com/report/github.com/maiqingqiang/TypeChat-Go
+[go-report-card]: https://goreportcard.com/badge/github.com/maiqingqiang/typechat-go
+[go-report-card-url]: https://goreportcard.com/report/github.com/maiqingqiang/typechat-go
 [go.dev-reference]: https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white
-[go.dev-reference-url]: https://pkg.go.dev/github.com/maiqingqiang/TypeChat-Go?tab=doc
+[go.dev-reference-url]: https://pkg.go.dev/github.com/maiqingqiang/typechat-go?tab=doc
 [go-pacakge]: https://github.com/maiqingqiang/TypeChat-Go/actions/workflows/test.yml/badge.svg?branch=main
 [go-pacakge-url]: https://github.com/maiqingqiang/TypeChat-Go/actions/workflows/test.yml

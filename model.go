@@ -96,7 +96,7 @@ func newBaseLanguageModel(url string, options ...Option) LanguageModel {
 	m := &baseLanguageModel{
 		url:                url,
 		retryMaxAttempts:   3,
-		retryPauseDuration: 20 * time.Second,
+		retryPauseDuration: 2 * time.Second,
 		headers:            make(map[string]string),
 	}
 

@@ -29,8 +29,8 @@ func NewJsonTranslator[T any](model LanguageModel, schema string, typeName strin
 }
 
 func (t *baseJsonTranslator[T]) CreateRequestPrompt(request string) string {
-	return fmt.Sprintf("You are a service that translates user requests into JSON objects of type \"%s\" according to the following Golang definitions:\n"+
-		"```\n%s```\n"+
+	return fmt.Sprintf("You are a service that translates user requests into JSON objects of struct \"%s\" according to the following Go definitions:\n"+
+		"```go\n%s```\n"+
 		"The following is a user request:\n"+
 		"\"\"\"\n%s\n\"\"\"\n"+
 		"The following is the user request translated into a JSON object with 1 spaces of indentation and no properties with the value undefined:\n",

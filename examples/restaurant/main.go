@@ -72,8 +72,8 @@ func printOrder(order *Order) {
 			}
 
 			if item.Pizza != nil || item.NamedPizza != nil {
-				if item.Pizza.Name != "" {
-					addedToppings, ok := namedPizzas[item.Pizza.Name]
+				if item.Pizza.Name.String() != "" {
+					addedToppings, ok := namedPizzas[item.Pizza.Name.String()]
 					if ok {
 						if item.Pizza.AddedToppings != nil {
 							item.Pizza.AddedToppings = append(item.Pizza.AddedToppings, addedToppings...)
@@ -83,8 +83,8 @@ func printOrder(order *Order) {
 					}
 				}
 
-				if item.Pizza.Size == "" {
-					item.Pizza.Size = "large"
+				if item.Pizza.Size.String() == "" {
+					item.Pizza.Size = Large
 				}
 
 				quantity := 1
@@ -92,7 +92,7 @@ func printOrder(order *Order) {
 					quantity = item.Pizza.Quantity
 				}
 
-				pizzaStr := fmt.Sprintf(`    %d %s pizza`, quantity, item.Pizza.Size)
+				pizzaStr := fmt.Sprintf(`    %d %s pizza`, quantity, item.Pizza.Size.String())
 
 				if len(item.Pizza.AddedToppings) > 0 && len(item.Pizza.RemovedToppings) > 0 {
 					item.Pizza.AddedToppings, item.Pizza.RemovedToppings = removeCommonStrings(item.Pizza.AddedToppings, item.Pizza.RemovedToppings)
@@ -123,6 +123,8 @@ func printOrder(order *Order) {
 						}
 					}
 				}
+
+				log.Printf(pizzaStr)
 			} else if item.Beer != nil {
 				quantity := 1
 				if item.Beer.Quantity > 0 {
@@ -137,11 +139,11 @@ func printOrder(order *Order) {
 					quantity = item.Salad.Quantity
 				}
 
-				if item.Salad.Portion != "" {
+				if item.Salad.Portion == "" {
 					item.Salad.Portion = "half"
 				}
 
-				if item.Salad.Style != "" {
+				if item.Salad.Style == "" {
 					item.Salad.Style = "Garden"
 				}
 

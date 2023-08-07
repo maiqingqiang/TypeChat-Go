@@ -48,9 +48,9 @@ func NewProgramTranslator(model LanguageModel, schema string) JsonTranslator[Pro
 }
 
 func (t *ProgramTranslator) CreateRequestPrompt(request string) string {
-	return fmt.Sprintf("You are a service that translates user requests into programs represented as JSON using the following TypeScript definitions:\n"+
+	return fmt.Sprintf("You are a service that translates user requests into programs represented as JSON using the following Go definitions:\n"+
 		"```\n%s```\n"+
-		"The programs can call functions from the API defined in the following TypeScript definitions:\n"+
+		"The programs can call functions from the API defined in the following Go definitions:\n"+
 		"```\n%s```\n"+
 		"The following is a user request:\n"+
 		"```\n%s\n```\n"+

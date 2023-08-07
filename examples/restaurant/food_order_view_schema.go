@@ -13,22 +13,23 @@ type OrderItem struct {
 	Unknown    *UnknownText `json:"unknown,omitempty"`
 }
 
-// UnknownText Use this type for order items that match nothing else
+// UnknownText Use this struct for order items that match nothing else
 type UnknownText struct {
 	Text string // The text that wasn't understood
 }
 
-type Size int
+// SizeEnum Define a custom type SizeEnum with an underlying type of int.
+type SizeEnum int
 
 const (
-	UnknownSize Size = iota
-	Small
-	Medium
-	Large
-	ExtraLarge
+	UnknownSize SizeEnum = 0
+	Small       SizeEnum = 1
+	Medium      SizeEnum = 2
+	Large       SizeEnum = 3
+	ExtraLarge  SizeEnum = 4
 )
 
-func (s Size) String() string {
+func (s SizeEnum) String() string {
 	switch s {
 	case Small:
 		return "small"
@@ -43,17 +44,18 @@ func (s Size) String() string {
 	}
 }
 
-type Name int
+// NameEnum Define a custom type NameEnum with an underlying type of int.
+type NameEnum int
 
 const (
-	UnknownName Name = iota
+	UnknownName NameEnum = iota
 	Hawaiian
 	Yeti
 	PigInaForest
 	CherryBomb
 )
 
-func (n Name) String() string {
+func (n NameEnum) String() string {
 	switch n {
 	case Hawaiian:
 		return "Hawaiian"
@@ -69,11 +71,11 @@ func (n Name) String() string {
 }
 
 type Pizza struct {
-	Size            string   `json:"size,omitempty"`             // [small | medium | large | extra large], default: large
+	Size            SizeEnum `json:"size,omitempty"`             // size use a custom SizeEnum type size with an underlying type of int, default: 3
 	AddedToppings   []string `json:"added_toppings,omitempty"`   // toppings requested (examples: pepperoni, arugula)
 	RemovedToppings []string `json:"removed_toppings,omitempty"` // toppings requested to be removed (examples: fresh garlic, anchovies)
-	Quantity        int      `json:"quantity,omitempty"`         // default: 1
-	Name            string   `json:"name,omitempty"`             // used if the requester references a pizza by name [Hawaiian | Yeti | Pig In a Forest | Cherry Bomb]
+	Quantity        int      `json:"quantity,omitempty"`         // quantity, default: 1
+	Name            NameEnum `json:"name,omitempty"`             // used if the requester references a pizza by name
 }
 
 type NamedPizza struct {
@@ -81,8 +83,8 @@ type NamedPizza struct {
 }
 
 type Beer struct {
-	Kind     string // examples: Mack and Jacks, Sierra Nevada Pale Ale, Miller Lite
-	Quantity int    `json:"quantity,omitempty"` // default: 1
+	Kind     string // examples: Mack and Jacks, Sierra Nevada, Pale Ale, Miller Lite
+	Quantity int    `json:"quantity,omitempty"` // quantity, default: 1
 }
 
 var saladSize = []string{"half", "whole"}
@@ -94,5 +96,5 @@ type Salad struct {
 	Style              string   `json:"style,omitempty"`               // default: Garden
 	AddedIngredients   []string `json:"added_ingredients,omitempty"`   // ingredients requested (examples: parmesan, croutons)
 	RemovedIngredients []string `json:"removed_ingredients,omitempty"` // ingredients requested to be removed (example: red onions)
-	Quantity           int      `json:"quantity,omitempty"`            // default: 1
+	Quantity           int      `json:"quantity,omitempty"`            // quantity, default: 1
 }

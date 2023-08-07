@@ -13,11 +13,11 @@
 
 # TypeChat-Go
 
-This is the Go language implementation of [TypeChat](https://github.com/microsoft/TypeChat).
+This is the Go language implementation of [microsoft/TypeChat](https://github.com/microsoft/TypeChat).
 
 TypeChat-Go is a library that makes it easy to build natural language interfaces using types.
 
-> [TypeChat](https://github.com/microsoft/TypeChat#typechat): Building natural language interfaces has traditionally
+> [microsoft/TypeChat](https://github.com/microsoft/TypeChat#typechat): Building natural language interfaces has traditionally
 > been difficult. These apps often relied on complex decision trees to determine intent and collect the required inputs
 > to
 > take action. Large language models (LLMs) have made this easier by enabling us to take natural language input from a

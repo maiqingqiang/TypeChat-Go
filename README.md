@@ -1,3 +1,5 @@
+English | [简体中文](./README-zh_CN.md)
+
 <a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
@@ -69,42 +71,23 @@ To use an Azure OpenAI endpoint, include the following environment variables:
 | `AZURE_OPENAI_ENDPOINT` | The full URL of the Azure OpenAI REST API (e.g. `https://YOUR_RESOURCE_NAME.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT_NAME/chat/completions?api-version=2023-05-15`) |
 | `AZURE_OPENAI_API_KEY`  | Your Azure OpenAI API key                                                                                                                                                      |
 
-We recommend setting environment variables by creating a `.env` file in the root directory of the project that looks
-like the following:
-
-```
-# For OpenAI
-OPENAI_MODEL=...
-OPENAI_API_KEY=...
-
-# For Azure OpenAI
-AZURE_OPENAI_ENDPOINT=...
-AZURE_OPENAI_API_KEY=...
-```
-
 # Examples
 
-To see TypeChat-Go in action, check out the examples found in this directory.
+To see TypeChat-Go in action, check out the [examples](./examples) found in this directory.
 
 Each example shows how TypeChat-Go handles natural language input, and maps to validated JSON as output. Most example
 inputs run on both GPT 3.5 and GPT 4.
-We are working to reproduce outputs with other models.
-Generally, models trained on both code and natural language text have high accuracy.
-
-We recommend reading each example in the following order.
 
 | Name                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Sentiment](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/sentiment)    | A sentiment classifier which categorizes user input as negative, neutral, or positive. This is TypeChat's "hello world!"                                                                                                                                                                                                                                                                            |
+| [Sentiment](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/sentiment)    | A sentiment classifier which categorizes user input as negative, neutral, or positive. This is TypeChat-Go's "hello world!"                                                                                                                                                                                                                                                                         |
 | [Coffee Shop](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/coffeeShop) | TODO                                                                                                                                                                                                                                                                                                                                                                                                |
 | [Calendar](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/calendar)      | An intelligent scheduler. This sample translates user intent into a sequence of actions to modify a calendar.                                                                                                                                                                                                                                                                                       |
 | [Restaurant](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/restaurant)  | An intelligent agent for taking orders at a restaurant. Similar to the coffee shop example, but uses a more complex schema to model more complex linguistic input. The prose files illustrate the line between simpler and more advanced language models in handling compound sentences, distractions, and corrections. This example also shows how we can use Go to provide a user intent summary. |
-| [Math](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/math)              | Translate calculations into simple programs given an API that can perform the 4 basic mathematical operators. This example highlights TypeChat's program generation capabilities.                                                                                                                                                                                                                   |
+| [Math](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/math)              | Translate calculations into simple programs given an API that can perform the 4 basic mathematical operators. This example highlights TypeChat-Go's program generation capabilities.                                                                                                                                                                                                                |
 | [Music](https://github.com/maiqingqiang/TypeChat-Go/tree/main/examples/music)            | TODO                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Run the examples
-
-Examples can be found in the [examples](./examples) directory.
 
 To run an example with one of these input files, run `go run . <input-file-path>`.
 For example, in the [math](./examples/math) directory, you can run:

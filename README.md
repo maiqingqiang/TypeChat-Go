@@ -113,7 +113,7 @@ For example, in the [math](./examples/math) directory, you can run:
 go run . /input.txt
 ```
 
-![run.png](examples%2Fmath%2Frun.png)
+![run.png](./examples/math/run.png)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

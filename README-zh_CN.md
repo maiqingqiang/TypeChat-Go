@@ -34,10 +34,12 @@ go get github.com/maiqingqiang/typechat-go
 目前，示例可以使用 OpenAI 或 Azure OpenAI。
 要使用 OpenAI，请使用以下环境变量：
 
-| 环境变量             | 值                                     |
-|------------------|---------------------------------------|
-| `OPENAI_MODEL`   | OpenAI 模型名称（例如 gpt-3.5-turbo 或 gpt-4） |
-| `OPENAI_API_KEY` | 你的 OpenAI 密钥                          |
+| 环境变量                  | 值                                                                        |
+|-----------------------|--------------------------------------------------------------------------|
+| `OPENAI_MODEL`        | OpenAI 模型名称（例如 gpt-3.5-turbo 或 gpt-4）                                    |
+| `OPENAI_API_KEY`      | 你的 OpenAI 密钥                                                             |
+| `OPENAI_ENDPOINT`     | OpenAI API 节点 - *可选*,  默认 `"https://api.openai.com/v1/chat/completions"` |
+| `OPENAI_ORGANIZATION` | OpenAI Organization - *可选*, 默认 `""`                                      |
 
 要使用 Azure OpenAI，请使用以下环境变量：
 
